@@ -1,4 +1,5 @@
-let array = require('./array').array;
+let array = require('./../../utility/array').array;
+const printJustValues = require('./../../utility/printArray');
 
 const quickSort = (array, lowIndex, highIndex) => {	
 
@@ -43,13 +44,6 @@ const getPartitionIndex = (array, lowIndex, highIndex) => {
 	return lowIndex;
 }
 
-const printJustValues = (array, pivotIndex, lowIndex, highIndex) => {
-	let printString = '';
-	for(let index = lowIndex; index <= highIndex; index++) {
-		printString += ` ${array[index].nested.value} `;
-	}
-	console.log(printString)
-}
 
 let lowIndex = 0;
 let highIndex = array.length - 1;
