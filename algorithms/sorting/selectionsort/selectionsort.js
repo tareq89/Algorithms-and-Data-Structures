@@ -10,13 +10,13 @@ const selectionsort = (array) => {
                 minimum = j;
             }
         }        
+        
         // [ array[minimum], array[i] ] = [ array[i], array[minimum] ];
         let temp = array[i];
         array[i] = array[minimum];
         array[minimum] = temp;
-    }
-    return array;
+    }    
 }
 
-let result = selectionsort(array);
-printJustValues(result);
+selectionsort(array);
+printJustValues(array);
